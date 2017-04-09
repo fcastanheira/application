@@ -1,0 +1,26 @@
+<div *ngIf="question">
+  <h2>Selected question detail screen!</h2>
+  <div>
+    <label>id: </label>{{question.id}}</div>
+  <div>
+    <label>Question: </label>
+    {{question.question}}
+  </div>
+  <div>
+    <label>Image: </label>
+    <br>
+    <img src="{{question.image_url}}" alt="Product" itemprop="image"/>
+  </div>
+  <div>
+  <label>Published at: </label>
+    {{question.published_at | date: 'dd/MM/yyyy'}}
+</div>
+  <div>
+    <label *ngFor="let choice of question.choices" >
+      <input type="radio" name="choices" value="choice" /> {{choice.choice}}
+      <br>
+    </label>
+  </div>
+  <button (click)="goBack()">Back</button>
+  <button (click)="save()">Save</button>
+</div>

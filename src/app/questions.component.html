@@ -1,0 +1,11 @@
+<h2>Questions</h2>
+<question-search></question-search>
+<ul class="questions">
+  <li *ngFor="let question of questions | paginate: {itemsPerPage: 10, currentPage:page, id: '1'}"
+      [class.selected]="question === selectedQuestion"
+      (click)="onSelect(question)">
+    <span class="badge">{{question.id}}</span> {{question.question}}
+  </li>
+</ul>
+<pagination-controls (pageChange)="page = $event" id="1" maxSize="5" directionLinks="true" autoHide="true"></pagination-controls>
+
