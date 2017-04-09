@@ -2,7 +2,6 @@ Pre-requisite:
 Have Node.js and npm installed in local machine
 
 Procedure:
-Clone repository to local directory
 
 Inside directory 'application' run 'npm install' console command to install dependecies
 
