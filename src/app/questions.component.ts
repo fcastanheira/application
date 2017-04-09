@@ -16,7 +16,7 @@ import { Router } from '@angular/router';
 export class QuestionsComponent implements OnInit {
   questions: Question[];
   selectedQuestion: Question;
-
+  page: number;
 
   constructor(
     private router: Router,
